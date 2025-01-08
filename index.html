@@ -5,12 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Kumar's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 4px solid white;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #4facfe;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .skills ul, .projects ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skills li, .projects li {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 0 0 calc(33.333% - 40px);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skills li:hover, .projects li:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: #4facfe;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+
+        .contact-button:hover {
+            background: #00f2fe;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Abhishek Kumar</h1>
         <p>Data Scientist | Machine Learning | AI Enthusiast</p>
         <img src="https://drive.google.com/uc?export=view&id=1YQBN2SmH-CahHw4n3mXMusYli-iur-RB" alt="Abhishek Kumar's Photo">
+        <div>
+            <a href="#contact" class="contact-button">Contact Me</a>
+            <a href="https://drive.google.com/file/d/1laxf5tih0an0BuvYCl4RWOxicNXJ8Ukc/view?usp=drive_link" class="contact-button">Download Resume</a>
+        </div>
     </header>
 
     <section id="about">
@@ -18,69 +125,39 @@
         <p>I am a dedicated Data Scientist with a strong foundation in Machine Learning, Artificial Intelligence, and Data Analysis. I hold a Master of Technology in Artificial Intelligence and Data Science from Galgotias University (2020-2022), achieving a commendable grade of 8.8/10. Prior to that, I earned my Bachelor of Technology in Computer Science and Engineering from St. Mary's Technical Campus, Kolkata (2016-2020), with a grade of 7.1/10.</p>
 
         <p>Throughout my academic journey, I have demonstrated a passion for applying data-driven solutions to real-world problems. My projects include developing regression models for house price prediction, machine learning models for water quality classification, and predictive models for diabetes diagnosis. These experiences have honed my skills in programming (Python, SQL), data manipulation (Pandas, NumPy), machine learning frameworks (Scikit-learn, TensorFlow, XGBoost), and data visualization tools (Matplotlib, Seaborn, Power BI, Tableau).</p>
-
-        <p>My commitment to continuous learning is evident through my certifications, including AWS Academy Machine Learning Foundations, AWS Academy Cloud Foundations, NVIDIA Deep Learning Certification, and Python Certification from HackerRank. My publication on "Speech Emotion Recognition by Using Feature Selection and Extraction" in IEEE Xplore (2022) reflects my research acumen and contribution to the field.</p>
-
-        <p>With a solid academic background, practical project experience, and a suite of relevant certifications, I am well-equipped to tackle complex data science challenges and contribute effectively to innovative AI solutions.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Phone: +91-6291282687</p>
-        <p>Email: <a href="mailto:er.abhisingh827@gmail.com">er.abhisingh827@gmail.com</a></p>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Programming: Python, SQL</li>
-            <li>Data Manipulation: Pandas, NumPy</li>
-            <li>Machine Learning: Scikit-learn, TensorFlow, XGBoost</li>
-            <li>Data Visualization: Matplotlib, Seaborn, Power BI, Tableau</li>
-            <li>Databases: MySQL, PostgreSQL, MongoDB</li>
-            <li>Cloud Platforms: AWS</li>
-            <li>Version Control: GitHub</li>
+        <ul class="skills">
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Scikit-learn</li>
+            <li>TensorFlow</li>
+            <li>XGBoost</li>
+            <li>Matplotlib</li>
+            <li>Seaborn</li>
+            <li>Power BI</li>
+            <li>Tableau</li>
+            <li>AWS</li>
+            <li>GitHub</li>
         </ul>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/singhraj827/House-Prices-Advanced-Regression-Techniques">House Prices: Advanced Regression Techniques</a> - Built a regression model to predict house prices based on extensive data preprocessing and feature engineering.</li>
-            <li><a href="https://github.com/singhraj827/Water_quality_Test">Water Quality Test</a> - Developed a machine learning model to classify water quality using chemical and biological attributes.</li>
-            <li><a href="https://github.com/singhraj827/Diabetes_Machine_Learning">Diabetes Prediction</a> - Created a predictive model for diagnosing diabetes leveraging ensemble techniques.</li>
+        <ul class="projects">
+            <li><a href="https://github.com/singhraj827/House-Prices-Advanced-Regression-Techniques">House Prices: Advanced Regression Techniques</a></li>
+            <li><a href="https://github.com/singhraj827/Water_quality_Test">Water Quality Test</a></li>
+            <li><a href="https://github.com/singhraj827/Diabetes_Machine_Learning">Diabetes Prediction</a></li>
         </ul>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>Master of Technology (MTech), Artificial Intelligence and Data Science</strong> - Galgotias University (2020-2022), Grade: 8.8/10</p>
-        <p><strong>Bachelor of Technology (BTech), Computer Science and Engineering</strong> - St. Mary's Technical Campus, Kolkata (2016-2020), Grade: 7.1/10</p>
-    </section>
-
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>AWS Academy Graduate - AWS Academy Machine Learning Foundations</li>
-            <li>AWS Academy Graduate - AWS Academy Cloud Foundations</li>
-            <li>NVIDIA Deep Learning Certification</li>
-            <li>Python Certification from HackerRank</li>
-        </ul>
-    </section>
-
-    <section id="publications">
-        <h2>Publications</h2>
-        <p><strong>Speech Emotion Recognition by Using Feature Selection and Extraction</strong> - IEEE Xplore (2022)  
-        <a href="https://ieeexplore.ieee.org/document/9792796">Read the paper</a></p>
-    </section>
-
-    <section id="resume">
-        <h2>Downloadable Resume</h2>
-        <a href="https://drive.google.com/file/d/1laxf5tih0an0BuvYCl4RWOxicNXJ8Ukc/view?usp=drive_link">Download My Resume</a>
     </section>
 
     <footer>
         <p>Contact: <a href="mailto:er.abhisingh827@gmail.com">er.abhisingh827@gmail.com</a></p>
+        <p>&copy; 2025 Abhishek Kumar. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
